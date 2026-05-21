@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>BikeVentas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- LOGIN -->
+<div id="login" class="screen active">
+  <div class="card-box">
+    <h2>🚴 BikeVentas</h2>
+    <input type="text" placeholder="Usuario">
+    <input type="password" placeholder="Contraseña">
+    <button onclick="mostrar('menu')">Ingresar</button>
+  </div>
+</div>
+
+<!-- MENÚ -->
+<div id="menu" class="screen">
+  <h2>Bienvenido 👋</h2>
+
+  <div class="menu-grid">
+    <div class="card" onclick="mostrar('clientes')">👥<p>Clientes</p></div>
+    <div class="card" onclick="mostrar('productos')">🚲<p>Productos</p></div>
+    <div class="card" onclick="mostrar('ventas')">📊<p>Ventas</p></div>
+  </div>
+</div>
+
+<!-- CLIENTES -->
+<div id="clientes" class="screen">
+  <div class="header">
+    <h3>Clientes</h3>
+    <button onclick="mostrar('menu')">←</button>
+  </div>
+
+  <input type="text" placeholder="Buscar cliente...">
+
+  <div class="list">
+    <div class="item">👤 Fernanda Rodríguez</div>
+    <div class="item">👤 Miller Ortiz</div>
+    <div class="item">👤 Luis Omar Pinzon</div>
+  </div>
+</div>
+
+<!-- PRODUCTOS -->
+<div id="productos" class="screen">
+  <div class="header">
+    <h3>Productos</h3>
+    <button onclick="mostrar('menu')">←</button>
+  </div>
+
+  <div class="list">
+    <div class="item">🚲 Bicicleta Montaña</div>
+    <div class="item">⚡ Bicicleta Eléctrica</div>
+    <div class="item">🪖 Casco</div>
+  </div>
+</div>
+
+<!-- VENTAS -->
+<div id="ventas" class="screen">
+  <div class="header">
+    <h3>Ventas</h3>
+    <button onclick="mostrar('menu')">←</button>
+  </div>
+
+  <h4>Total: $650.890</h4>
+
+  <div class="list">
+    <div class="item">📦 Miller Ortiz - Bicicleta</div>
+    <div class="item">📦 Luis Omar - Eléctrica</div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
